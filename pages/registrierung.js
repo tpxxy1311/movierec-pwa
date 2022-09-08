@@ -51,7 +51,7 @@ const Register = () => {
         const registerResponse = await register.json();
         console.log(registerResponse);
 
-        if(registerResponse.error.status==400){
+        if(registerResponse.error){
             showNotification();
         }
         else{

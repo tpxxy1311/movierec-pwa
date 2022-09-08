@@ -51,7 +51,7 @@ const Login = () => {
 
         console.log(loginResponse)
 
-        if(loginResponse.error.status==400){
+        if(loginResponse.error){
             setLoginFailed(true);
             showNotification();
             
