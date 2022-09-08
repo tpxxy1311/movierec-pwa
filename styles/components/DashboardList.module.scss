@@ -1,0 +1,36 @@
+@import "../../styles/globals/mixins.scss";
+
+.section{
+    margin-bottom: 5%;
+    @include phone{
+        margin-bottom: 0%;
+    }
+    h4{
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        @include phone{
+            margin-top:8%;
+            margin-bottom: 8%;
+        }
+    }
+    .emptyinfo{
+        opacity: 0.7;
+    }
+    .hide{
+        display: none;
+    }
+    .movielist{
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+        @include phone{
+            grid-template-columns: repeat(1, 100%);
+        }
+    }
+}

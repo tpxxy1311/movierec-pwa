@@ -1,0 +1,73 @@
+.panelItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 7%;
+    p{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .toggleBox{
+        background-color: var(--transparent-grey-overlay);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 12px;
+        padding: 5px;
+        .toggleButton{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            padding: 5px 15px;
+            color: black;
+            border-radius: 10px;
+            background-color: transparent;
+        }
+        .toggleButtonActive{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            padding: 5px 15px;
+            color: black;
+            border-radius: 10px;
+            background-color: white;
+        }
+    }
+}
+
+.panelItem2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 7%;
+    p{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .toggleBox{
+        background-color: var(--transparent-grey-overlay);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 12px;
+        padding: 5px;
+        .toggleButton{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            padding: 5px 22px;
+            color: black;
+            border-radius: 10px;
+            background-color: transparent;
+        }
+        .toggleButtonActive{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            padding: 5px 22px;
+            color: black;
+            border-radius: 10px;
+            background-color: white;
+        }
+    }
+}

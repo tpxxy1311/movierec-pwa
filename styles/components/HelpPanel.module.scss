@@ -1,0 +1,123 @@
+@import "../../styles/globals/mixins.scss";
+
+.panelWrapper{
+    cursor: pointer;
+    position: fixed;
+    left: 5%;
+    bottom: 30px;
+    width: 60px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--transparent-grey);
+    backdrop-filter: blur(20px);
+    transition: all 0.5s ease;
+    @include phone{
+        visibility: visible;
+        width: 70%;
+        left: 15%;
+        top: 95%;
+        height: 270px;
+        border-radius: 25px;
+        backdrop-filter: blur(20px) saturate(150%);
+        bottom: 15px;
+        opacity: 0;
+    }
+    @include tablet{
+        bottom: 15px;
+    }
+    .panelIcon{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include phone{
+            opacity: 0;
+            height: 10%;
+        }
+    }
+    .helpPanel{
+        display: none;
+        opacity: 0;
+        @include phone{
+        display: flex;
+        opacity: 1;
+        flex-direction: column;
+        padding: 0% 10% 0% 10%;
+        .panelTop{
+            display: flex;
+            align-items: center;
+            .closeButton{
+                cursor: pointer;
+                border: none;
+                background-color: var(--transparent-grey-overlay);
+                border-radius: 10px;
+                display: flex;
+            }
+            h6{
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin:0;
+                padding-left: 7%;
+            }
+        }
+        }
+    }
+}
+.panelWrapper:hover{
+    background-color: var(--transparent-grey-hover);
+    @include phone{
+        background-color: var(--transparent-grey);
+    }
+}
+
+.panelWrapperOpen{
+    position: fixed;
+    z-index: 5;
+    left: 5%;
+    bottom: 30px;
+    width: 250px;
+    height: 270px;
+    border-radius: 25px;
+    background-color: var(--transparent-grey);
+    backdrop-filter: blur(20px) saturate(150%);
+    transition: all 0.5s ease;
+    @include tablet{
+        bottom: 15px;
+    }
+    @include phone{
+        visibility: visible;
+        width: 70%;
+        left: 15%;
+        top: 45%;
+    }
+    .panelIcon{
+        opacity: 0;
+    }
+    .helpPanel{
+        display: flex;
+        opacity: 1;
+        flex-direction: column;
+        padding: 0% 10% 0% 10%;
+        .panelTop{
+            display: flex;
+            align-items: center;
+            .closeButton{
+                cursor: pointer;
+                border: none;
+                background-color: var(--transparent-grey-overlay);
+                border-radius: 10px;
+                display: flex;
+            }
+            h6{
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin:0;
+                padding-left: 5%;
+                @include phone{
+                    padding-left: 7%;
+                }
+            }
+        }
+    }
+}

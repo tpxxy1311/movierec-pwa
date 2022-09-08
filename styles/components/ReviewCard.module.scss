@@ -1,0 +1,111 @@
+@import "../../styles/globals/mixins.scss";
+
+.reviewcard{
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    border: 1px solid var(--transparent-grey);
+    padding: 20px;
+    transition: border-color 0.3s ease-in-out;
+    margin-bottom: 6%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include phone{
+        margin-bottom: 8%;
+    }
+    .posterbox{
+        width: 20%;
+        height: 160px;
+        position: relative;
+        display: block;
+        border-radius: 15px;
+        cursor: pointer;
+        @include phone{
+            width: 25%;
+        }
+        .linkBlur{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(0);
+            opacity: 0;
+            z-index:5;
+            border-radius: 10px;
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+            .icon{
+                position: relative;
+                left: 33%;
+                top:38%;
+                color: white;
+            }
+        }
+        img{
+            border-radius: 10px;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+    }
+    .posterbox:hover{
+        .linkBlur{
+            backdrop-filter: blur(8px) ;
+            opacity: 1;
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+        }
+    }
+    .infosection{
+        margin-left: 7%;
+        max-width: 70%;
+        @include phone{
+            max-width: 68%;
+        }
+        .timestamp{
+            margin: 0;
+            font-size: 0.6rem;
+            opacity: 0.7;
+        }
+        .posttitle{
+            margin: 0;
+            margin-top: 5px;
+            font-weight: 600;
+            a{
+                transition: opacity 0.2s ease;
+            }
+            a:hover{
+                opacity: 0.7;
+                transition: opacity 0.2s ease;
+            }
+        }
+        .hidetitle{
+            display: none;
+        }
+        .ratingbox{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            span{
+                background-color: transparent;
+                border: none;
+                outline: none;
+                display: inline-flex;
+                align-items: center;
+                margin-right: 3px;
+                @include phone{
+                padding-left: 0;
+                margin-right: 3px;
+                }
+            }
+            .whitestar{
+                color: var(--font-color);
+            }
+            .greystar{
+                color: var(--transparent-grey-overlay);
+            }
+        }
+        .comment{
+            font-weight: 400;
+            opacity: 0.7;
+            margin: 0;
+        }
+    }
+}

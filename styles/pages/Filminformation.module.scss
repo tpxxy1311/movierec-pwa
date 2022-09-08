@@ -1,0 +1,253 @@
+@import "../../styles/globals/mixins.scss";
+
+.infobox{
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+    @include phone{
+        width: 100%;
+        margin-top: 25%;
+    }
+    @include tablet{
+        margin-top: 20%;
+    }
+    .mobiletitle{
+        display: none;
+        @include phone{
+            margin: 0;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 3.5rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5%;
+        }
+    }
+    .topsection{
+        display: flex;
+        justify-content: flex-start;
+        @include phone{
+            justify-content: space-between;
+        }
+        @include tablet{
+            margin-bottom: 10%;
+        }
+        .posterbox{
+            width: 20%;
+            border-radius: 10px;
+            display: block;
+            @include phone{
+                width: 45%;
+            }
+            @include tablet{
+                width: 30%;
+            }
+            .poster{
+                // border: 1px solid var(--transparent-grey)!important;
+                border-radius: 15px;
+            }
+        }
+        .factsbox{
+            margin-left: 5%;
+            width: 75%;
+            @include phone{
+                width: 50%;
+                margin-left:0;
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+            }
+            h1{
+                margin: 0;
+                display: inline-block;
+                font-weight: 700;
+                font-size: 4.5rem;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                @include phone{
+                    display: none;
+                }
+                @include tablet{
+                    margin-bottom:15px;
+                }
+            }
+            .ratingfacts{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top:3%;
+                @include phone{
+                    flex-direction: column-reverse;
+                }
+                .statsbox{
+                    display: flex;
+                    width: 100%;
+                    margin-left: 2%;
+                    @include phone{
+                        margin-left: 0;
+                    }
+                }
+            }
+            .keyfacts{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 4%;
+                @include phone{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-top: 0%;
+                }
+                @include tablet{
+                    display: none;
+                }
+                .factelement{
+                    p{
+                        margin: 0;
+                        
+                    }
+                    a{
+                        transition: all 0.3 ease;
+                    }
+                    p:first-child{
+                        opacity: 0.7;
+                        font-size: 0.9rem;
+                        margin-bottom: 5px;
+                        font-weight: 300;
+                    }
+                    p:nth-child(2){
+                        font-size: 1rem;
+                        font-weight: 500;
+                        transition: opacity 0.3 ease;
+                    }
+                    p:nth-child(2):hover{
+                        opacity: 0.85;
+                        transition: opacity 0.3 ease;
+                    }
+                }
+                .factelement:not(:last-child){
+                    margin-right: 8%;
+                    @include phone{
+                        margin-right: 0;
+                        margin-bottom: 7%;
+                    }
+                }
+                .factelement:first-child{
+                    display: flex;
+                    flex-grow: 0.2;
+                    justify-content: space-between;
+                    align-items: center;
+                    .portraitbox{
+                        margin-right: 8px;
+                        width: 23%;
+                        @include phone{
+                            display: none;
+                        }
+                        .portrait{
+                            border-radius: 50%;
+                            border: 1px solid var(--transparent-grey)!important;
+                        }
+                    }
+                }
+            }
+            .cast{
+                margin-top: 3%;
+                p{
+                    margin: 0;
+                }
+                p:first-child{
+                    opacity: 0.7;
+                    font-size: 0.9rem;
+                    margin-bottom: 5px;
+                    font-weight: 300;
+                }
+                p:nth-child(2){
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .factstablet{
+        display: none;
+        @include tablet{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 4%;
+            margin-bottom: 10%;
+        }
+        .factelement{
+            p{
+                margin: 0;
+            }
+            p:first-child{
+                opacity: 0.7;
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+                font-weight: 300;
+            }
+            p:nth-child(2){
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            p:nth-child(2):hover{
+                opacity: 0.85;
+                transition: opacity 0.3 ease
+            }
+        }
+        .factelement:not(:last-child){
+            margin-right: 10%;
+        }
+        .factelement:first-child{
+            display: flex;
+            flex-grow: 0.3;
+            justify-content: space-between;
+            align-items: center;
+            .portraitbox{
+                margin-right: 8px;
+                width: 23%;
+                @include phone{
+                    display: none;
+                }
+                .portrait{
+                    border-radius: 50%;
+                    border: 1px solid var(--transparent-grey)!important;
+                }
+            }
+        }
+    }
+    .cast{
+        margin-top: 3%;
+        p{
+            margin: 0;
+        }
+        p:first-child{
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            font-weight: 300;
+        }
+        p:nth-child(2){
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+
+    .bottomsection{
+        margin-top: 4%;
+        h3{
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+        p{
+            font-weight: 400;
+            opacity: 0.7;
+            line-height: 1.5;
+            margin: 0;
+            margin-bottom: 5%;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+:root {
+    --font-color: #000000;
+    --body-bg: #f5f5f7;
+    --card-bg: #ffffff;
+    --main-blue: #006DDB;
+    --main-blue-hover: #288aed;
+    --transparent-grey:#9797974d;
+    --transparent-grey-hover:#d6d5d54d;
+    --transparent-grey-overlay:#9b9b9b80; 
+    --placeholder-text:#757575;
+    --genre-gradient-drama: linear-gradient(90deg, #24D5F9 20%, #C873FD 80%);
+    --genre-gradient-thriller: linear-gradient(135deg,#63e3dc,#1254c2);
+    --genre-gradient-war: linear-gradient(90deg, #F1F2B5 20%, #47a2ae 80%);
+    --genre-gradient-scifi: linear-gradient(90deg, #16AEE9 20%, #4FD391 80%);
+    --genre-gradient-mafia: linear-gradient(225deg,#e374ff,#3d30ea);
+    --genre-gradient-action: linear-gradient(90deg, #ffb077 20%, #b82698 80%);
+    --genre-gradient-western: linear-gradient(45deg,#b94cdb,#e26092 50%,#fe815e);
+    --genre-gradient-comedy: linear-gradient(45deg,#16327c,#1ebf98);
+    --genre-gradient-fantasy: linear-gradient(135deg,#FCCB18,#E75160);
+}
+  
+[data-theme="dark"] {
+    --font-color: #ffffff;
+    --body-bg: #000000;
+    --card-bg: #1d1d1f;
+    --main-blue: #006DDB;
+    --main-blue-hover: #288aed;
+    --transparent-grey:#9797974d;
+    --transparent-grey-hover:#d6d5d54d;
+    --transparent-grey-overlay:#9b9b9b80;  
+    --placeholder-text:#757575;
+    --genre-gradient-drama: linear-gradient(90deg, #24D5F9 20%, #C873FD 60%);
+    --genre-gradient-thriller: linear-gradient(135deg,#63e3dc,#1254c2);
+    --genre-gradient-war: linear-gradient(90deg, #F1F2B5 20%, #47a2ae 80%);
+    --genre-gradient-scifi: linear-gradient(90deg, #16AEE9 20%, #4FD391 80%);
+    --genre-gradient-mafia: linear-gradient(225deg,#e374ff,#3d30ea);
+    --genre-gradient-action: linear-gradient(90deg, #ffb077 20%, #b82698 80%);
+    --genre-gradient-western: linear-gradient(45deg,#e26092 30%,#fe815e);
+    --genre-gradient-comedy: linear-gradient(45deg,#16327c,#1ebf98);
+    --genre-gradient-fantasy: linear-gradient(135deg,#FCCB18,#E75160 80%);
+}

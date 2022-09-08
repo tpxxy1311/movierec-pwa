@@ -1,0 +1,37 @@
+.infobox{
+    margin-top: 10%;
+    h1{
+        font-size: 6rem;
+        font-weight: 800;
+        text-align: center;
+        background: linear-gradient(90deg, #24D5F9 20%, #C873FD 80%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+    .info{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .link{
+        text-align: center;
+        font-size: 1.2rem;
+        a{
+            transition: background-color 0.3s ease-in-out;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 7px;
+            padding: 7px 10px 7px 18px;
+            .linkicon{
+                text-align: center;
+                padding: 0;
+            }
+        }
+        a:hover{
+            background-color: var(--transparent-grey-overlay);
+        }
+    }
+}

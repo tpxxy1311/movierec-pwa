@@ -1,0 +1,67 @@
+@import "../../styles/globals/mixins.scss";
+
+.movieCard{
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    border: 1px solid var(--transparent-grey);
+    padding: 20px;
+    transition: border-color 0.3s ease-in-out;
+    margin-bottom: 9%;
+    @include phone{
+        margin-bottom: 8%;
+    }
+    .title{
+        margin: 0;
+        margin-bottom: 7%;
+        display: block;
+        font-size: 1.3rem;
+        font-weight: 700;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis!important;
+        @include phone{
+            font-size: 1.7rem;
+            white-space: inherit;
+            text-overflow: unset;
+            overflow: unset;
+            width: auto;
+        }
+    }
+    .movieInfo{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        span{
+            opacity: 0.7;
+            font-size: 0.8rem;
+            font-weight: 300;
+            transition: opacity 0.3s ease-in-out;
+            @include phone{
+                font-size: 0.95rem;
+            }
+        }
+        span:not(:last-child){
+            margin-right: 4%;
+        }
+        .seperator{
+            width: 3px;
+            height: 3px;
+            background-color: var(--font-color);
+            border-radius: 50%;
+        }
+    }
+}
+
+.movieCard:hover{
+    border-color: var(--main-blue);
+    .movieInfo{
+        span{
+            opacity: 1;
+        }
+    }
+}

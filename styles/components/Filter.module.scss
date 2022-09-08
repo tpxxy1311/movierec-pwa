@@ -1,0 +1,282 @@
+@import "../../styles/globals/mixins.scss";
+
+.filterbox{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    @include phone{
+        flex-wrap: wrap;
+        margin-top: 8%;
+        margin-bottom:19%;
+    }
+    .filterselects{
+        display: flex;
+        width: 20%;
+        justify-content: flex-end;
+        z-index: 10;
+        @include phone{
+            width: 100%;
+            justify-content: space-between;
+        }
+        .select{
+            background-color: var(--transparent-grey);
+            backdrop-filter: blur(20px);
+            transition: all 0.5s ease;
+            border-radius: 8px;
+            padding: 0px 10px; 
+            height: 35px;
+            position: absolute;
+            width: 13%;
+            @include phone{
+                position: absolute;
+                width: 43%;
+            }
+            @include tablet{
+                width: 18%;
+            }
+            .selectTitle{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 500;
+                padding-top: 6px;
+                padding-bottom: 5px;
+                font-size: 0.9rem;
+                color:var(--placeholder-text);
+                transition: color 0.3s ease;
+                @include tablet{
+                    font-size: 0.8rem;
+                }
+                .icon{
+                    transition: 0.5s ease;
+                    color: var(--font-color);
+                }
+            }
+            .options{
+                opacity: 0;
+                display: flex;
+                visibility: hidden;
+                flex-direction: column;
+                transition: all 0.2s ease;
+                font-size: 0.8rem;
+                .option{
+                    margin-top:5px;
+                    margin-bottom: 5px;
+                    padding-left: 6px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    transition: all 0.2s ease;
+                    border-radius: 5px;
+                }
+                .selected{
+                    margin-top:5px;
+                    margin-bottom: 5px;
+                    padding-left: 6px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    transition: background-color 0.2s ease;
+                    border-radius: 5px;
+                    background-color: white;
+                    color: black;
+                }
+                .remove{
+                    width: fit-content;
+                    border-radius: 8px;
+                    background-color: var(--transparent-grey-overlay);   
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    left:75%;
+                    @include phone{
+                        left: 82%;
+                    }
+                    .icon{
+                        margin: 2px 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .selectOpenGenre{
+            background-color: var(--transparent-grey);
+            backdrop-filter: blur(20px);
+            transition: all 0.5s ease;
+            border-radius: 8px;
+            padding: 0px 10px; 
+            height: 325px;
+            position: absolute;
+            width: 13%;
+            @include phone{
+                position: absolute;
+                width: 43%;
+            }
+            @include tablet{
+                width: 18%;
+            }
+            .selectTitle{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 500;
+                padding-top: 6px;
+                padding-bottom: 5px;
+                font-size: 0.9rem;
+                transition: color 0.3s ease;
+                @include tablet{
+                    font-size: 0.8rem;
+                }
+                .icon{
+                    transform: rotate3d(100, 0, 1, 180deg);
+                    transition: 0.5s ease;
+                    color: var(--font-color);
+                }
+            }
+            .options{
+                opacity: 1;
+                display: flex;
+                flex-direction: column;
+                transition: height 0.9s ease;
+                font-size: 0.8rem;
+                .option{
+                    margin-top:5px;
+                    margin-bottom: 5px;
+                    padding-left: 6px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    transition: background-color 0.2s ease;
+                    border-radius: 5px;
+                }
+                .option:hover{
+                    background-color: var(--transparent-grey-overlay);
+                }
+                .selected{
+                    margin-top:5px;
+                    margin-bottom: 5px;
+                    padding-left: 6px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    transition: background-color 0.2s ease;
+                    border-radius: 5px;
+                    background-color: white;
+                    color: black;
+                }
+                .remove{
+                    width: fit-content;
+                    border-radius: 8px;
+                    background-color: var(--transparent-grey-overlay);   
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    left:75%;
+                    cursor: pointer;
+                    @include phone{
+                        left: 82%;
+                    }
+                    .icon{
+                        margin: 2px 5px;
+                    }
+                }
+            }
+        }
+        .selectOpenSort{
+            background-color: var(--transparent-grey);
+            backdrop-filter: blur(20px);
+            transition: all 0.5s ease;
+            border-radius: 8px;
+            padding: 0px 10px; 
+            height: 130px;
+            position: absolute;
+            width: 13%;
+            @include phone{
+                position: absolute;
+                width: 43%;
+            }
+            @include tablet{
+                width: 18%;
+            }
+            .selectTitle{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 500;
+                padding-top: 6px;
+                padding-bottom: 5px;
+                font-size: 0.9rem;
+                transition: color 0.3s ease;
+                @include tablet{
+                    font-size: 0.8rem;
+                }
+                .icon{
+                    transform: rotate3d(100, 0, 1, 180deg);
+                    transition: 0.5s ease;
+                    color: var(--font-color);
+                }
+            }
+            .options{
+                opacity: 1;
+                display: flex;
+                flex-direction: column;
+                transition: height 0.9s ease;
+                font-size: 0.8rem;
+                .option{
+                    margin-top:5px;
+                    margin-bottom: 5px;
+                    padding-left: 6px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    transition: background-color 0.2s ease;
+                    border-radius: 5px;
+                }
+                .option:hover{
+                    background-color: var(--transparent-grey-overlay);
+                }
+                .selected{
+                    margin-top:5px;
+                    margin-bottom: 5px;
+                    padding-left: 6px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    transition: background-color 0.2s ease;
+                    border-radius: 5px;
+                    background-color: white;
+                    color: black;
+                }
+                .remove{
+                    width: fit-content;
+                    border-radius: 8px;
+                    background-color: var(--transparent-grey-overlay);   
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    left:75%;
+                    cursor: pointer;
+                    @include phone{
+                        left: 82%;
+                    }
+                    .icon{
+                        margin: 2px 5px;
+                    }
+                }
+            }
+        }
+    }
+    .filterselects{
+        div:first-child{
+            margin-right: 15%;
+            @include phone{
+                margin-right: 0;
+            }
+            @include tablet{
+                margin-right: 19.5%;
+            }
+        }
+        div:last-child{
+            @include phone{
+                left: 52%;
+            }
+        }
+    }
+}

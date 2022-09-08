@@ -1,0 +1,52 @@
+@import "../../styles/globals/mixins.scss";
+
+.cookiePanel{
+    z-index:20;
+    position: fixed;
+    top: 15%;
+    left: 25%;
+    width: 50%;
+    border-radius: 15px;
+    background-color: var(--transparent-grey);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    transition: visibility 0.5s ease;
+    @include phone{
+        width: 90%;
+        left: 5%;
+        padding: 5%;
+    }
+    .textBox{
+        h6{
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0;
+            @include phone{
+                font-size: 1rem;
+            }
+        }
+    }
+    button{
+        background-color: var(--main-blue);
+        border-radius: 10px;
+        padding: 2% 4%;
+        border: none;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all ease 0.2s;
+        @include phone{
+            padding: 4%;
+        }
+    }
+    button:hover{
+        background-color: var(--main-blue-hover);
+    }
+}
+.hidePanel{
+    visibility: hidden;
+    transition: visibility 0.5s ease;
+}

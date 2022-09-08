@@ -1,0 +1,26 @@
+@import "../../styles/globals/mixins.scss";
+
+.navigation{
+    width: 35%;
+    @include phone{
+        display: none;
+    }
+    @include tablet{
+        width: auto;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        padding-inline-start: 0;
+        li{
+            list-style: none;
+            font-weight: 400;
+            transition: background-color 0.3s ease-in-out;
+            border-radius: 7px;
+            padding: 5px 10px;
+        }
+        li:hover{
+            background-color: var(--transparent-grey-overlay);
+        }
+    }
+}

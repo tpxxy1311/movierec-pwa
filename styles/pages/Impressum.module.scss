@@ -1,0 +1,33 @@
+@import "../../styles/globals/mixins.scss";
+
+.impressbox{
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+    @include phone{
+        width: 100%;
+        margin-top: 25%;
+    }
+    @include tablet{
+        margin-top: 20%;
+    }
+    h1{
+        font-size: 4.5rem;
+        font-weight: 700;
+        @include phone{
+            font-size: 3.5rem;
+        }
+    }
+    .infobox{
+        margin-bottom: 4%;
+        h3{
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+        p{
+            font-weight: 400;
+            opacity: 0.7;
+            line-height: 1.5;
+        }
+    }
+}

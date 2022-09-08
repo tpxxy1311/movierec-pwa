@@ -1,0 +1,735 @@
+@import "../../styles/globals/mixins.scss";
+
+.landingsection{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--card-bg);
+    margin: 0;
+    .contentbox{
+        width: 70%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10%;
+        @include phone{
+            width: 90%;
+            padding-bottom: 20%;
+        }
+        @include tablet{
+            width: 90%;
+        }
+        .imagewrapper{
+            width: 30%;
+            height: 30%;
+            margin-top: 16%;
+            position: relative;
+            @include phone{
+                margin-top: 40%;
+                width: 70%;
+                height: 70%;
+            }
+            @include tablet{
+                width: 40%;
+                height: 40%;
+                margin-top: 35%;
+            }
+            .imagecontainer{
+                position: relative;
+                z-index: 3;
+                width: 100%;
+                height: 100%;
+                padding: 8px;
+                border: 1px solid hsla(0,0%,100%,.3);
+                border-radius: 50%;
+                background-color: hsla(0,0%,84%,.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    border-radius: 50%;
+                    width: 100%;
+                }
+            }
+            .shadowcontainer{
+                position: absolute;
+                left: -20%;
+                top: -20%;
+                right: 0;
+                bottom: 0;
+                width: 140%;
+                height: 140%;
+                padding: 20%;
+                border-radius: 50%;
+                -webkit-filter: blur(20px);
+                filter: blur(20px);
+                .shadow{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-image: radial-gradient(circle farthest-side at 100% 100%,#9873ff,rgba(152,115,255,0)),radial-gradient(circle farthest-side at 100% 0,#0ba5f7,rgba(85,196,255,0)),radial-gradient(circle farthest-side at 0 0,#ff763c,rgba(255,176,60,0)),radial-gradient(circle farthest-side at 0 100%,#ff5aaa,rgba(255,90,170,0));
+                }
+            }
+        }
+        h1{
+            margin: 0;
+            margin-top: 55px;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+        h2{
+            margin: 0;
+            padding-top: 7%;
+            font-weight: 700;
+            font-size: 3.1rem;
+            line-height: 1.3;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(91.36deg, #ECA658 0%, #F391A6 13.02%, #E188C3 25.52%, #A58DE3 37.5%, #56ABEC 49.48%, #737EB7 63.02%, #C8638C 72.92%, #DD5D57 84.38%, #DF6C51 97.92%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-movement 10s infinite ease both;
+            @include phone{
+                font-size: 2rem;
+                width: 100%;
+            }
+            @include tablet{
+                font-size: 2.5rem;
+            }
+        }
+        @keyframes gradient-movement { 
+            0%{background-position:0% 4%}
+            50%{background-position:100% 97%}
+            100%{background-position:0% 4%}
+        }
+        .linkbox{
+            margin-top: 8%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            a{
+                text-align: center;
+                font-size: 1.2rem;
+                transition: background-color 0.3s ease-in-out;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 7px;
+                padding: 7px 10px 7px 18px;
+            }
+            a:hover{
+                background-color: var(--transparent-grey-overlay);
+            }
+        }
+    }
+}
+
+.panelsection{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--body-bg);
+    margin: 0;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    .contentbox{
+        width: 70%;
+        margin: auto;
+        @include phone{
+            width: 90%;
+        }
+        @include tablet{
+            width: 80%;
+        }
+        h1{
+            opacity: 0.7;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin:0;
+            margin-bottom: 1%;
+            @include phone{
+                font-size: 1.3rem;
+                margin-bottom: 3%;
+            }
+        }
+        h2{
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0;
+            @include phone{
+                font-size: 2rem;
+            }
+        }
+        .panelbox{
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            row-gap: 26px;
+            column-gap: 26px;
+            margin-top: 8%;
+            width: 100%;
+            margin-bottom: 26px;
+            @include phone{
+                grid-template-columns: 1fr;
+            }
+            .description{
+                background-color: var(--card-bg);
+                border-radius: 15px;
+                border: 1px solid var(--transparent-grey);
+                padding: 10% ;
+                h5{
+                    font-size: 1.5rem;
+                    margin: 0;
+                    font-weight: 600;
+                }
+                p{
+                    opacity: 0.7;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.3;
+                    margin:0;
+                    margin-top:8%;
+                }
+                @include tablet{
+                    grid-row-start: span 1;
+                    grid-row-end: span 1;
+                    grid-column-start: span 2;
+                    grid-column-end: span 2;
+                }
+            }
+            .grid{
+                display: grid;
+                grid-auto-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                row-gap: 16px;
+                column-gap: 16px;
+                @include tablet{
+                    grid-row-start: span 1;
+                    grid-row-end: span 1;
+                    grid-column-start: span 2;
+                    grid-column-end: span 2;
+                    row-gap: 26px;
+                    column-gap: 26px;
+                }
+                .smallcard{
+                    background-color: var(--card-bg);
+                    border-radius: 13px;
+                    border: 1px solid var(--transparent-grey);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 0px 20px;
+                    @include phone{
+                        padding: 20px 10px;
+                    }
+                    @include tablet{
+                        padding: 30px;
+                    }
+                    .stat{
+                        font-weight: 700;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        .number{
+                            font-size: 2.8rem;
+                        }
+                        .add{
+                            vertical-align: top;
+                            font-size: 1.5rem;
+                        }
+                        .low{
+                            font-size: 1rem;
+                            padding-left: 5px;
+                        }
+                    }
+                    p{
+                        font-weight: 500;
+                        text-align: center;
+                        opacity: 0.7;
+                        margin: 0;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .smallcard:first-child{
+                .stat{
+                    background-image: var(--genre-gradient-scifi);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            .smallcard:nth-child(2){
+                .stat{
+                    background-image: var(--genre-gradient-thriller);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            .smallcard:nth-child(3){
+                .stat{
+                    background-image: var(--genre-gradient-mafia);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            .smallcard:nth-child(4){
+                .stat{
+                    background-image: var(--genre-gradient-action);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            .widecard{
+                grid-row-start: span 1;
+                grid-row-end: span 1;
+                grid-column-start: span 2;
+                grid-column-end: span 2;
+                background-image: linear-gradient(120deg,#eb4f56,#9d66e9);
+                border-radius: 15px;
+                padding: 5%;
+                display: flex;
+                justify-content: space-between;
+                @include phone{
+                    grid-row-start: span 1;
+                    grid-row-end: span 1;
+                    grid-column-start: span 1;
+                    grid-column-end: span 1;
+                    flex-direction: column;
+                    padding: 10%;
+                }
+                @include tablet{
+                    padding: 10%;
+                }
+                .textside{
+                    width: 50%;
+                    color: white;
+                    @include phone{
+                        width: 100%;
+                    }
+                    h5{
+                        font-size: 2rem;
+                        margin: 0;
+                        font-weight: 600;
+                    }
+                    p{
+                        opacity: 0.8;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        line-height: 1.3;
+                        margin:0;
+                        margin-top:3%;
+                        @include phone{
+                            margin-bottom: 10%;
+                        }
+                    }
+                }
+                img{
+                    width: 40%;
+                    @include phone{
+                        width: 100%;
+                    }
+                }
+            }
+            .bigcard{
+                background-color: var(--card-bg);
+                border-radius: 15px;
+                border: 1px solid var(--transparent-grey);
+                padding: 10% ;
+                p{
+                    font-weight: 600;
+                    margin: 0;
+                    font-size: 1.2rem;
+                }
+            }
+            .connect{
+                padding: 0;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                align-items: flex-end;
+                img{
+                    width: 50%;
+                }
+                p{
+                    padding-left: 10%;
+                    height: 50%;
+                    @include phone{
+                        height: 60%;
+                    }
+                }
+            }
+            .install{
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    width: 50%;
+                }
+                p{
+                    padding-top: 7%;
+                    padding-bottom: 7%;
+                }
+            }
+        }
+        .asymetrical{
+            display: grid;
+            row-gap: 26px;
+            column-gap: 26px;
+            grid-template-columns: 0.4fr 1fr;
+            grid-template-rows: auto;
+            margin-bottom:26px;
+            @include phone{
+                grid-template-columns: 1fr;
+            }
+            @include tablet{
+                grid-template-columns: 1fr;
+            }
+            .narrowcard{
+                background-image: linear-gradient(45deg,#16327c,#1ebf98);
+                border-radius: 15px;
+                padding: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    text-align: center;
+                    margin: 0;
+                    color: white;
+                }
+            }
+            .widecard{
+                border: 1px solid var(--transparent-grey);
+                border-radius: 15px;
+                padding-top: 40px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                padding-right: 30px;
+                background-color: var(--card-bg);
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: center;
+                p{
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .bottompanel{
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            row-gap: 26px;
+            column-gap: 26px;
+            @include phone{
+                column-gap: 16px;
+            }
+            .bigcard{
+                border: 1px solid var(--transparent-grey);
+                background-color: var(--card-bg);
+                border-radius: 15px;
+                padding: 10%;
+                p{
+                    font-weight: 600;
+                    margin: 0;
+                    font-size: 1.2rem;
+                }
+            }
+            .rating{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                p{
+                    text-align: center;
+                    @include phone{
+                        margin-bottom: 10%;
+                    }
+                }
+                img{
+                    width: 60%;
+                    @include phone{
+                        width: 90%;
+                    }
+                }
+            }
+            .friends{
+                padding:0;
+                display: flex;
+                justify-content: flex-end;
+                img{
+                    width: 55%;
+                    @include phone{
+                        width: 100%;
+                        opacity: 0.8;
+                    }
+                }
+                p{
+                    width: 45%;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 30px;
+                    @include phone{
+                        position: absolute;
+                        padding-left: 20px;
+                        padding-top: 35px;
+                        z-index: 2;
+                    }
+                }
+            }
+            .widecard{          
+                grid-column-start: span 2;
+                grid-column-end: span 2;
+                grid-row-start: span 1;
+                grid-row-end: span 1;
+                border-radius: 15px;
+                background-image: linear-gradient(45deg,#b94cdb,#e26092 50%,#fe815e);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 3% 0%;
+                color: white;
+                @include phone{
+                    padding: 8% 5%;
+                }
+                @include tablet{
+                    padding: 8%;
+                }
+                p{
+                    margin: 0;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    @include phone{
+                        text-align: center;
+                    }
+                }
+                a{
+                    transition: background-color 0.3s ease-in-out;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 7px;
+                    padding: 7px 10px 7px 18px;
+                    z-index:2;
+                    font-size: 1.1rem;
+                    margin-top:15px;
+                    font-weight: 400;
+                }
+                a:hover{
+                    background-color: var(--transparent-grey-overlay);
+                }
+            }
+        }
+    }
+}
+
+.trendsection{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--card-bg);
+    margin: 0;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    @include tablet{
+        min-height: 50vh;
+    }
+    .contentbox{
+        width: 70%;
+        margin: auto;
+        @include phone{
+            width: 90%;
+        }
+        @include tablet{
+            width: 80%;
+        }
+        h1{
+            opacity: 0.7;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin:0;
+            margin-bottom: 1%;
+            @include phone{
+                font-size: 1.3rem;
+                margin-bottom: 3%;
+            }
+        }
+        h2{
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0;
+            @include phone{
+                font-size: 2rem;
+            }
+        }
+        .trendbox{
+            display: grid;
+            width: 100%;
+            grid-auto-columns: 1fr;
+            column-gap: 28px;
+            row-gap: 28px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            margin-top: 8%;
+            @include phone{
+                grid-template-columns: 1fr;
+            }
+            .trendcard{
+                position: relative;
+                justify-self: stretch;
+                border-radius: 15px;
+                height: 220px;
+                background-color: var(--body-bg);
+                grid-row-start: span 1;
+                grid-row-end: span 1;
+                grid-column-start: span 1;
+                grid-column-end: span 1;
+                cursor: pointer;
+                .linkBlur{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    backdrop-filter: blur(0);
+                    opacity: 0;
+                    z-index:5;
+                    border-radius: 14px;
+                    transition: opacity 0.2s ease;
+                    cursor: pointer;
+                    .icon{
+                        position: relative;
+                        left: 85%;
+                        top:9%;
+                    }
+                }
+                h6{
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    margin: 0;
+                    z-index: 6;
+                    
+                }
+                .img{
+                    border-radius: 14px;
+                    opacity: 0.8;
+                    border: 10px solid var(--transparent-grey);
+                }
+            }
+            .trendcard:hover{
+                .linkBlur{
+                    backdrop-filter: blur(15px) ;
+                    opacity: 1;
+                    transition: opacity 0.2s ease;
+                    cursor: pointer;
+                }
+            }
+        }
+        .linkbox{
+            margin-top: 8%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            a{
+                text-align: center;
+                font-size: 1.2rem;
+                transition: background-color 0.3s ease-in-out;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 7px;
+                padding: 7px 10px 7px 18px;
+            }
+            a:hover{
+                background-color: var(--transparent-grey-overlay);
+            }
+        }
+    }
+}
+
+.contactsection{
+    margin: 0;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    @include phone{
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+    .contentbox{
+        width: 70%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        @include phone{
+            width: 90%;
+        }
+        @include tablet{
+            width: 80%;
+        }
+        h5{
+            font-weight: 700;
+            font-size: 3.1rem;
+            line-height: 1.3;
+            width: 100%;
+            margin: 0;
+            background: linear-gradient(91.36deg, #ECA658 0%, #F391A6 13.02%, #E188C3 25.52%, #A58DE3 37.5%, #56ABEC 49.48%, #737EB7 63.02%, #C8638C 72.92%, #DD5D57 84.38%, #DF6C51 97.92%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-movement 10s infinite ease both;
+            @include phone{
+                font-size: 2rem;
+                width: 100%;
+            }
+            @include tablet{
+                font-size: 2.5rem;
+            }
+        }
+        @keyframes gradient-movement { 
+            0%{background-position:0% 4%}
+            50%{background-position:100% 97%}
+            100%{background-position:0% 4%}
+        }
+        .linkbox{
+            margin-top: 8%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            a{
+                text-align: center;
+                font-size: 1.2rem;
+                transition: background-color 0.3s ease-in-out;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 7px;
+                padding: 7px 10px 7px 18px;
+                cursor: pointer;
+            }
+            a:hover{
+                background-color: var(--transparent-grey-overlay);
+            }
+        }
+    }
+}
+

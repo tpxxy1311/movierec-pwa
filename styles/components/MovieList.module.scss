@@ -1,0 +1,19 @@
+@import "../../styles/globals/mixins.scss";
+
+.movieList{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    margin-top: 5%;
+    @include phone{
+        grid-template-columns: repeat(1, 100%);
+        margin-top: 10%;
+    }
+    @include tablet{
+        grid-template-columns: repeat(2, 47%);
+    }
+}

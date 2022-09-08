@@ -1,0 +1,15 @@
+@import "../../styles/globals/mixins.scss";
+
+.ratingInfo{
+    display: flex;
+    align-items: center;
+    font-size: 1.15rem;
+    margin-right: 3%;
+    @include phone{
+        font-size: 1rem;
+        margin-right: 5%;
+    }
+    .icon{
+        margin-left: 5px;
+    }
+}
