@@ -11,6 +11,7 @@
   "dependencies": {
     "@iconscout/react-unicons": "^1.1.6",
     "@iconscout/react-unicons-solid": "^0.0.3",
+    "moment": "^2.29.4",
     "next": "12.2.5",
     "next-pwa": "^5.6.0",
     "next-seo": "^5.5.0",
