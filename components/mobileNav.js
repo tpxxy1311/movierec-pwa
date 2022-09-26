@@ -5,6 +5,8 @@ import { UilSetting } from '@iconscout/react-unicons';
 import styles from "../styles/components/MobileNav.module.scss";
 import { useState, useEffect, useContext } from "react";
 import Link from "next/link";
+import Router from 'next/router';
+import { parseCookies } from 'nookies';
 import LoginContext from "../context/logincontext";
 
 const MobileNav = () => {
@@ -13,6 +15,17 @@ const MobileNav = () => {
 
     const [show, setShow] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
+
+    const jwt = parseCookies().jwt;
+
+    const checkDashboard = () =>{
+        if(!jwt || jwt=="undefined"){
+            Router.push('/login')
+        }
+        else{
+            Router.push('/dashboard')
+        }
+    }
 
     const controlNavbar = () => {
         if (typeof window !== 'undefined') { 
@@ -45,9 +58,7 @@ const MobileNav = () => {
                 </Link>
             </li>
             <li>
-                <Link href='/dashboard'>
-                <a><UilBookmark/></a>
-                </Link>
+                <a onClick={checkDashboard}><UilBookmark/></a>
             </li>
             <li>
                 <Link href='/feed'>

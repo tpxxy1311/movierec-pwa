@@ -45,9 +45,11 @@ function redirectUser(ctx, location) {
 
 
 MyApp.getInitialProps = async ({ctx}) => {
+  
   const jwt = parseCookies(ctx).jwt;
   const cookie  = parseCookies(ctx).accept;
   let id;
+  
   if(parseCookies(ctx).id){
     id=parseCookies(ctx).id
   }
@@ -58,20 +60,19 @@ MyApp.getInitialProps = async ({ctx}) => {
   let lgInfo;
   let cookieInfo;
   
-    const res1 = await fetch(`${publicRuntimeConfig.API_URL}/api/seenlists/?populate=*&&filters[user][id][$eq]=${id}`)
-    const seenlist = await res1.json()
-    const seenlistNumbers = seenlist.data.map(item => item.attributes.movie.data.id)
+  const res1 = await fetch(`${publicRuntimeConfig.API_URL}/api/seenlists/?populate=*&&filters[user][id][$eq]=${id}`)
+  const seenlist = await res1.json()
+  const seenlistNumbers = seenlist.data.map(item => item.attributes.movie.data.id)
     
-    const res2 = await  fetch(`${publicRuntimeConfig.API_URL}/api/watchlists/?populate=*&&filters[users_permissions_user][id][$eq]=${id}`)
-    const watchlist = await res2.json()
-    const watchlistNumbers = watchlist.data.map(item => item.id)
+  const res2 = await  fetch(`${publicRuntimeConfig.API_URL}/api/watchlists/?populate=*&&filters[users_permissions_user][id][$eq]=${id}`)
+  const watchlist = await res2.json()
+  const watchlistNumbers = watchlist.data.map(item => item.id)
   
-    const res3 = await  fetch(`${publicRuntimeConfig.API_URL}/api/reclists/?populate=*&&filters[user][id][$eq]=${id}`)
-    const reclist = await res3.json()
-    const reclistNumbers = reclist.data.map(item => item.attributes.movie.data.id)
+  const res3 = await  fetch(`${publicRuntimeConfig.API_URL}/api/reclists/?populate=*&&filters[user][id][$eq]=${id}`)
+  const reclist = await res3.json()
+  const reclistNumbers = reclist.data.map(item => item.attributes.movie.data.id)
   
  
-
   if (!jwt || jwt=="undefined") {
     lgInfo=false;
     if (ctx.pathname === "/dashboard") {

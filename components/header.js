@@ -4,14 +4,14 @@ import Router from "next/router";
 import { useContext } from 'react';
 import LoginContext from "../context/logincontext";
 import { useState} from "react";
-import { destroyCookie } from "nookies";
+import { destroyCookie, parseCookies } from "nookies";
 import Navigation from "./navigation";
 
 const Header = () => {
 
 
     const {loginState, setLoginState} = useContext(LoginContext)
-    console.log(loginState)
+    
 
     const switchLoginState = () =>{
         if(loginState){
@@ -26,6 +26,7 @@ const Header = () => {
         }
     }
 
+    
     return ( 
         <header className={styles.header}>
             <div className={styles.logo}>
